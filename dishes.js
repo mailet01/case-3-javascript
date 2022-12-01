@@ -1,5 +1,11 @@
+function addDish(evt) {
+console.log("ghello");
+inputDishEl.value
+console.log(inputDishEl.value);
+}
 const ul = document.getElementById("dishes");
-const inputDish = document.getElementById("dishes");
-const = addDish = document.querySelector("#adddish");
-addDish.addEventListener("click"), addDish;
-let ul = document.createElement("li");
+const inputDishEl = document.getElementById("userinput");
+const addDishEl = document.querySelector("#adddish");
+addDishEl.addEventListener("click", addDish);
+
+document.getElementById("dishes").innerHTML += "<li>"
