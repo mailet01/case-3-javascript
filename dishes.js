@@ -19,23 +19,29 @@ function addDish(evt) {
         button.addEventListener("click", (evt) => {
             // skapar själva funktionen för att ta bort en maträtt
             evt.target.parentElement.remove();
-            const button1 = document.createElement("button");
-            button1.textContent = "favorite"
-            button1.addEventListener("click", (evt) => {
-                evt.target.parentElement.favorite();
-
-            })
+            
         })
 
-       
 
+
+        const button1 = document.createElement("button");
+        button1.textContent = "favorite"
+        button1.addEventListener("click", (evt) => {
+            
+            e.target.parentElement.favorite();
+
+        })
+    
         // gör så att li elementet visas när man lägger till en maträtt
         ul.appendChild(li);
         // gör så att textfältet för maträtten töms efter hen har lagt till en rätt
         inputDishEl.value = "";
         // gör så att knappen delete visas i lielementet
         li.appendChild(button)
-    } else {
+        li.appendChild(button1)
+        
+    } 
+    else {
         // retuneras om användaren inte har skrivit någon maträtt
         
         inputDishEl.setAttribute("placeholder", "you have to write a dish")
