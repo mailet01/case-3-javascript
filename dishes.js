@@ -11,10 +11,13 @@ function addDish(evt) {
         // skapa en ta bort knapp
         // skapa en variabel för att lägga till en ta bort knapp
         const button = document.createElement("button");
+        // skapa knappens text
         button.textContent = "delete"
+        // skapa en addvEntlistener för knappen "add dish"
         button.addEventListener("click", addDish);
-
+// skapa en addEventlistener för knappen "delete"
         button.addEventListener("click", (evt) => {
+            // skapar själva funktionen för att ta bort en maträtt
             evt.target.parentElement.remove();
             const button1 = document.createElement("button");
             button1.textContent = "favorite"
@@ -30,9 +33,11 @@ function addDish(evt) {
         ul.appendChild(li);
         // gör så att textfältet för maträtten töms efter hen har lagt till en rätt
         inputDishEl.value = "";
+        // gör så att knappen delete visas i lielementet
         li.appendChild(button)
     } else {
-        // sätter en placeholder som talar om att man måste lägga till en rätt för att programmet ska köras
+        // retuneras om användaren inte har skrivit någon maträtt
+        
         inputDishEl.setAttribute("placeholder", "you have to write a dish")
     }
 
