@@ -1,10 +1,10 @@
 // skapa en funktion för att lägga till en maträtt
 function addDish(evt) {
-    
+
     // skapa en variabel för att kunna skriva en maträtt
     const dish = inputDishEl.value;
     console.log(dish)
-// skapa ett vilkor som kontrollerar om användaren har skrivit en maträtt eller inte
+    // skapa ett vilkor som kontrollerar om användaren har skrivit en maträtt eller inte
     if (dish.length > 0) {
         const li = document.createElement("li");
         li.textContent = dish;
@@ -15,11 +15,11 @@ function addDish(evt) {
         button.textContent = "delete"
         // skapa en addvEntlistener för knappen "add dish"
         button.addEventListener("click", addDish);
-// skapa en addEventlistener för knappen "delete"
+        // skapa en addEventlistener för knappen "delete"
         button.addEventListener("click", (evt) => {
             // skapar själva funktionen för att ta bort en maträtt
             evt.target.parentElement.remove();
-            
+
         })
 
 
@@ -27,29 +27,37 @@ function addDish(evt) {
         const button1 = document.createElement("button");
         button1.textContent = "favorite"
         button1.addEventListener("click", (evt) => {
-            
+
             // gör så att själva funktionen för själva favoritknappen fungerar
             evt.target.parentElement.classList.add("favorite");
 
         })
-    
+        const button2 = document.createElement("button");
+        button2.textContent = "change object"
+        button2.addEventListener("click", (evt) => {
+console.log("Emil")
+
+
+        })
+
         // gör så att li elementet visas när man lägger till en maträtt
-        ul.appendChild(li);        // gör så att textfältet för maträtten töms efter hen har lagt till en rätt
+        ul.appendChild(li);
+        // gör så att textfältet för maträtten töms efter hen har lagt till en rätt
         inputDishEl.value = "";
         // gör så att knappen delete visas i lielementet
         li.appendChild(button)
         li.appendChild(button1)
-        
-    } 
+        li.appendChild(button2)
+    }
     else {
         // retuneras om användaren inte har skrivit någon maträtt
-        
+
         inputDishEl.setAttribute("placeholder", "you have to write a dish")
     }
 
 
 }
-            
+
 // skapat en variabel för ULelementet i HTML filen och pekar på ett id
 const ul = document.getElementById("dishes");
 // skapar en variabel för inputfältet
