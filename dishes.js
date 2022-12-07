@@ -28,13 +28,12 @@ function addDish(evt) {
         button1.textContent = "favorite"
         button1.addEventListener("click", (evt) => {
             
-            e.target.parentElement.favorite();
+            evt.target.parentElement.classList.add("favorite");
 
         })
     
         // gör så att li elementet visas när man lägger till en maträtt
-        ul.appendChild(li);
-        // gör så att textfältet för maträtten töms efter hen har lagt till en rätt
+        ul.appendChild(li);        // gör så att textfältet för maträtten töms efter hen har lagt till en rätt
         inputDishEl.value = "";
         // gör så att knappen delete visas i lielementet
         li.appendChild(button)
@@ -50,9 +49,9 @@ function addDish(evt) {
 
 }
             
-// skapat en variabel för ulelementet i HTMLfilen och pekar på ett id
+// skapat en variabel för ULelementet i HTML filen och pekar på ett id
 const ul = document.getElementById("dishes");
-// skapar en variabel för inputfältet o
+// skapar en variabel för inputfältet
 const inputDishEl = document.getElementById("userinput");
 // skapar en variabel till knappen för att lägga till en rätt
 const addDishEl = document.querySelector("#addDish");
