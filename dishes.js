@@ -28,6 +28,7 @@ function addDish(evt) {
         button1.textContent = "favorite"
         button1.addEventListener("click", (evt) => {
             
+            // gör så att själva funktionen för själva favoritknappen fungerar
             evt.target.parentElement.classList.add("favorite");
 
         })
