@@ -7,7 +7,9 @@ function addDish(evt) {
     // skapa ett vilkor som kontrollerar om användaren har skrivit en maträtt eller inte
     if (dish.length > 0) {
         const li = document.createElement("li");
-        li.textContent = dish;
+        const p = document.createElement("p");
+
+        p.textContent = dish;
         // skapa en ta bort knapp
         // skapa en variabel för att lägga till en ta bort knapp
         const button = document.createElement("button");
@@ -35,7 +37,9 @@ function addDish(evt) {
         const button2 = document.createElement("button");
         button2.textContent = "change object"
         button2.addEventListener("click", (evt) => {
-console.log("Emil")
+        const li = evt.target.parentElement;
+        const p = li.querySelector("p")
+        p.contentEditable = "true";
 
 
         })
@@ -45,9 +49,13 @@ console.log("Emil")
         // gör så att textfältet för maträtten töms efter hen har lagt till en rätt
         inputDishEl.value = "";
         // gör så att knappen delete visas i lielementet
+        li.appendChild(p);
         li.appendChild(button)
+        // gör så att favoriteknappen visas
         li.appendChild(button1)
+        // gör så att changeknappen visas
         li.appendChild(button2)
+        
     }
     else {
         // retuneras om användaren inte har skrivit någon maträtt
