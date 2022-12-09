@@ -37,9 +37,10 @@ function addDish(evt) {
         const button2 = document.createElement("button");
         button2.textContent = "change object"
         button2.addEventListener("click", (evt) => {
-        const li = evt.target.parentElement;
-        const p = li.querySelector("p")
-        p.contentEditable = "true";
+            const li = evt.target.parentElement;
+            const p = li.querySelector("p")
+            // gör så att man kan redigera ett objekt i listan
+            p.contentEditable = "true";
 
 
         })
@@ -55,7 +56,7 @@ function addDish(evt) {
         li.appendChild(button1)
         // gör så att changeknappen visas
         li.appendChild(button2)
-        
+
     }
     else {
         // retuneras om användaren inte har skrivit någon maträtt
