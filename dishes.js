@@ -15,7 +15,7 @@ function addDish(evt) {
         const button = document.createElement("button");
         // skapa knappens text
         button.textContent = "delete"
-        // skapa en addvEntlistener för knappen "add dish"
+        // skapa en addEventlistener för knappen "add dish"
         button.addEventListener("click", addDish);
         // skapa en addEventlistener för knappen "delete"
         button.addEventListener("click", (evt) => {
@@ -71,7 +71,7 @@ function addDish(evt) {
 const ul = document.getElementById("dishes");
 // skapar en variabel för inputfältet
 const inputDishEl = document.getElementById("userinput");
-// skapar en variabel till knappen för att lägga till en rätt
+// skapar en variabel till knappen som lägger till en maträtt
 const addDishEl = document.querySelector("#addDish");
 // gör så att maträtten läggs till när man trycker på knappen "add dish"
 addDishEl.addEventListener("click", addDish)
