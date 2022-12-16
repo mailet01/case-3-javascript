@@ -25,7 +25,6 @@ function addDish(evt) {
         })
 
 
-
         const button1 = document.createElement("button");
         button1.textContent = "favorite"
         button1.addEventListener("click", (evt) => {
